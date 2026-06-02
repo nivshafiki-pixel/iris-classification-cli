@@ -1,35 +1,34 @@
-# Product Requirements Document (PRD): Iris Classification Project
+# Product Requirements Document (PRD): Iris Classification Project (Expanded)
 
 ## 1. Objective
-The primary goal of this project is to build a machine learning classification model to accurately categorize Iris flowers into one of three species based on morphological measurements.
+The primary goal of this project is to build a machine learning classification model to accurately categorize Iris flowers into one of **four** species based on morphological measurements. This version introduces a synthetic 4th category to increase the model's complexity.
 
-*   **Model Split:** The dataset will be partitioned into a **Train set (80%)** and a **Test set (20%)** to ensure robust evaluation and prevent overfitting.
-*   **Success Metric:** High accuracy on the test set and a clear interpretation of model performance via a confusion matrix.
+*   **Model Split:** The dataset is partitioned into a **Train set (80%)** and a **Test set (20%)**.
+*   **Success Metric:** High accuracy on the test set and a clear interpretation of model performance via a **4x4 confusion matrix**.
 
 ## 2. Dataset Definition
-The [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/iris) is a classic multiclass classification dataset.
+The dataset consists of the original [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/iris) plus a synthetic 4th category. The complete dataset is saved locally as **`iris_dataset.csv`**.
 
 ### 2.1 Features (Inputs)
-The model will use four numerical features (measured in cm):
-1.  **Sepal Length:** Length of the sepal.
-2.  **Sepal Width:** Width of the sepal.
-3.  **Petal Length:** Length of the petal.
-4.  **Petal Width:** Width of the petal.
+The model uses four numerical features (measured in cm):
+1.  **Sepal Length**
+2.  **Sepal Width**
+3.  **Petal Length**
+4.  **Petal Width**
 
 ### 2.2 Target Categories (Outputs)
-The model will classify each observation into one of three species:
+The model classifies each observation into one of four species:
 1.  **Iris Setosa**
 2.  **Iris Versicolour**
 3.  **Iris Virginica**
+4.  **Iris Synthetic** (Added for increased complexity)
 
 ## 3. Required Deliverables
-To complete the project, the following artifacts must be provided:
-
-*   **Python Code:** A clean, documented script (`iris_classifier.py`) that handles data loading, preprocessing, training, and evaluation.
-*   **Confusion Matrix:** A visualization (e.g., a heatmap) showing the model's true positive vs. false positive predictions for each category.
-*   **Convergence Graph:** A plot showing the **Loss over Iterations** (or Accuracy over Epochs) to demonstrate the model's learning process.
-*   **Summary Report:** A brief analysis of the results, including final accuracy and any insights gained from the model's performance.
+*   **Python Code:** Updated script (`iris_machine.py`) that generates the 4th category, saves the CSV, and trains the model.
+*   **Local CSV Dataset:** `iris_dataset.csv` containing all 4 categories.
+*   **Confusion Matrix:** A **4x4 heatmap** visualization showing the model's predictions.
+*   **Convergence Graph:** A plot showing the **Loss over Iterations** for the 4-class training cycle.
+*   **Summary Report:** Detailed analysis in Markdown (English and Hebrew).
 
 ## 4. Technical Constraints
-*   **Language:** Python 3.x
 *   **Libraries:** `scikit-learn`, `pandas`, `matplotlib`, `seaborn`.
